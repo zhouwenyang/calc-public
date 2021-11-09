@@ -33,21 +33,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 console.log("Server running on port " + port);
-console.log("Editing in smartide ...");
-console.log("Smoke Test 2021.10.28");
-console.log("Smoke test windows 2021.10.29");
-console.log("Smoke MacOS 2021.10.29");
-console.log("Smoke Test v0.1.2.845");
-console.log("Smoke Test windows 856");
-console.log("Smoke Test Windows 860");
-console.log("Smoke Test Windows 860 - VM");
-console.log("Smoke test 866 VM");
-console.log("Smoke Test Windows 860 - VM + 1");
-console.log("Smoke test Windows 866 VM + 1");
-console.log("Smoke test mac 889");
-console.log("Smoke test 896 - VM +1");
-console.log("Smoke test 914");
-console.log("Smoke test 922");
+console.log("Sprint 6 - 941");
 
 /**
  * Normalize a port into a number, string, or false.
