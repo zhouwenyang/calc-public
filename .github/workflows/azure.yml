@@ -17,8 +17,6 @@ on:
   ##  types: [created]
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 env:
   AZURE_WEBAPP_NAME: bh-calculator    # set this to your application's name
@@ -42,3 +40,15 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
+  Sync-To-Gitee:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sync to Gitee
+      uses: wearerequired/git-mirror-action@master
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+      with:
+        # 来源仓库
+        source-repo: "git@github.com:idcf-boat-house/boathouse-calculator.git"
+        # 目标仓库
+        destination-repo: "git@gitee.com:idcf-boat-house/boathouse-calculator.git"
