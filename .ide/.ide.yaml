@@ -6,6 +6,12 @@ workspace:
   dev-container:
     service-name: boathouse-calculator
     webide-port: 6800
+    
+    ports: # 申明端口
+      webide: 6800
+      ssh: 6822
+      application: 3001
+    
     ide-type: vscode  #vscode/theia
     volumes: 
       git-config: true
