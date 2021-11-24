@@ -33,6 +33,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 console.log("Server running on port " + port);
+console.log("smoke test ...");
 
 /**
  * Normalize a port into a number, string, or false.
