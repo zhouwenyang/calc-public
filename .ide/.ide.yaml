@@ -21,10 +21,9 @@ workspace:
       - npm start
   services:
     boathouse-calculator:
-      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-opvscode:1115
+      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-slim:latest
       restart: always
       environment:
-        POSTGRES_HOST_AUTH_METHOD: trust
         ROOT_PASSWORD: root123
       volumes:
         - .:/home/project
