@@ -17,6 +17,7 @@ workspace:
       git-config: true
       ssh-key: true
     command:
+      - npm config set registry https://registry.npmmirror.com
       - npm install
   services:
     boathouse-calculator:
