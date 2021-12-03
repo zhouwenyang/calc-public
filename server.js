@@ -33,8 +33,6 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 console.log("Server running on port " + port);
-console.log("Edit in smartide.");
-console.log("editing.");
 
 /**
  * Normalize a port into a number, string, or false.
