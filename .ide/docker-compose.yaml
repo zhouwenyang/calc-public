@@ -2,8 +2,8 @@ version: "3"
 services:
   boathouse-calculator:
     environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
       ROOT_PASSWORD: root123
+      LOCAL_USER_PASSWORD: root123     
     image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-opvscode:latest
     networks:
     - smartide-network
