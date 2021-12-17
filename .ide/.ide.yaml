@@ -21,7 +21,7 @@ workspace:
       - npm install
   services:
     boathouse-calculator:
-      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-node:latest
+      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-base:latest
       restart: always
       environment:
         ROOT_PASSWORD: root123
