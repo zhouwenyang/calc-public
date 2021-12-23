@@ -33,7 +33,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 console.log("Server running on port " + port);
-console.log("smoke test build 1626 win-remote");
+console.log("smoke test build 1640 mac-local");
 /**
  * Normalize a port into a number, string, or false.
  */
