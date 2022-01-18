@@ -1,0 +1,23 @@
+version: smartide/v0.2
+orchestrator:
+  type: docker-compose
+  version: 3
+workspace:
+  dev-container:
+    service-name: boathouse-calculator-dev
+    webide-port: 6800
+    
+    ports: # 申明端口
+      webide: 6800
+      ssh: 6822
+      application: 3001
+    
+    ide-type: vscode  #vscode/theia
+    volumes: 
+      git-config: true
+      ssh-key: true
+    command:
+      - npm config set registry https://registry.npmmirror.com
+      - npm install
+
+  kube-deploy-file: k8s-deploy.yaml  # 单个k8s deploy 配置文件模式， 如果是个文件夹就采用文件夹内的文件
