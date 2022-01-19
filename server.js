@@ -34,6 +34,7 @@ server.on('listening', onListening);
 
 console.log("Server running on port " + port);
 console.log("smoke test build 1827 windows-local-remote mac-local-remote");
+console.log("Running JetBrain Gateway connected with SmartIDE remote workspace.");
 /**
  * Normalize a port into a number, string, or false.
  */
