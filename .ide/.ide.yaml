@@ -30,8 +30,10 @@ workspace:
       - .:/home/project
       expose:
         - 3000
+        - 22
       ports:
         - 3001:3001
+        - 6822:22
       networks:
         - smartide-network
 
