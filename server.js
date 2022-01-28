@@ -33,7 +33,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 console.log("Server running on port " + port);
-console.log("smoke test build 1915 mac-local");
+console.log("smoke test build 1970 win-local");
 console.log("smartide demo");
 /**
  * Normalize a port into a number, string, or false.
