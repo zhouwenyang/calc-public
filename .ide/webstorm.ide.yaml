@@ -30,6 +30,7 @@ workspace:
       - .:/home/project
       ports:
         - 3001:3001
+        - 8887:8887
       networks:
         - smartide-network
 
