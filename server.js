@@ -33,7 +33,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 console.log("Server running on port " + port);
-console.log("smoke mac local+remote 2020");
+console.log("smoke mac local+remote windows local 2020");
 /**
  * Normalize a port into a number, string, or false.
  */
