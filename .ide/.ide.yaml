@@ -1,11 +1,10 @@
-version: smartide/v0.2
+version: smartide/v0.3
 orchestrator:
   type: docker-compose
   version: 3
 workspace:
   dev-container:
     service-name: boathouse-calculator
-    webide-port: 6800
     
     ports: # 申明端口
       webide: 6800
@@ -21,7 +20,7 @@ workspace:
       - npm install
   services:
     boathouse-calculator:
-      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-base:latest
+      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-node-v2-vscode:all-version
       restart: always
       environment:
         ROOT_PASSWORD: root123
@@ -30,6 +29,8 @@ workspace:
       - .:/home/project
       ports:
         - 3001:3001
+        - 6822:22
+        - 6800:8887
       networks:
         - smartide-network
 

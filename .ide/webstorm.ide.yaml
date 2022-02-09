@@ -1,4 +1,4 @@
-version: smartide/v0.2
+version: smartide/v0.3
 orchestrator:
   type: docker-compose
   version: 3
@@ -12,7 +12,7 @@ workspace:
       ssh: 6822
       application: 3001
     
-    ide-type: vscode  #vscode/theia
+    ide-type: jb-projector  #vscode/theia
     volumes: 
       git-config: true
       ssh-key: true
@@ -21,7 +21,7 @@ workspace:
       - npm install
   services:
     boathouse-calculator:
-      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-node-v2-jetbrain-webstorm:2020.3.3-1994
+      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-node-v2-jetbrain-webstorm:2020.3.3-2043
       restart: always
       environment:
         ROOT_PASSWORD: root123
@@ -30,6 +30,7 @@ workspace:
       - .:/home/project
       ports:
         - 3001:3001
+        - 6822:22
         - 6800:8887
       networks:
         - smartide-network
