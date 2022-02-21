@@ -7,9 +7,9 @@ workspace:
     service-name: boathouse-calculator
     
     ports: # 申明端口
-      webide: 6800
-      ssh: 6822
-      application: 3001
+      tools-webide-vscode: 6800
+      tools-ssh: 6822
+      apps-application: 3001
     
     ide-type: vscode  #vscode/theia
     volumes: 
