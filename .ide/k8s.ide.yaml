@@ -20,4 +20,4 @@ workspace:
       - npm config set registry https://registry.npmmirror.com
       - npm install
 
-  kube-deploy-files: k8s-deploy.yaml  # 单个k8s deploy 配置文件模式， 如果是个文件夹就采用文件夹内的文件
+  kube-deploy-files: "*-deployment.yaml"  
