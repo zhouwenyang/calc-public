@@ -41,6 +41,12 @@ spec:
     - name: "3001"
       port: 3001
       targetPort: 3001
+    - name: "6800"
+      port: 6800
+      targetPort: 3000
+    - name: "6822"
+      port: 6822
+      targetPort: 22
   selector:
     boathouse-calculator.service: boathouse-calculator
 status:
