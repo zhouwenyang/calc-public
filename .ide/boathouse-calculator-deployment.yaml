@@ -1,0 +1,60 @@
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boathouse-calculator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      boathouse-calculator.service: boathouse-calculator
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+        - env:
+            - name: LOCAL_USER_PASSWORD
+              value: root123
+            - name: ROOT_PASSWORD
+              value: root123
+          image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-opvscode:latest
+          name: boathouse-calculator
+          ports:
+            - containerPort: 3001
+          resources: {}
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: boathouse-calculator
+spec:
+  ports:
+    - name: "3001"
+      port: 3001
+      targetPort: 3001
+  selector:
+    boathouse-calculator.service: boathouse-calculator
+status:
+  loadBalancer: {}
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: smartide-network
+spec:
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              boathouse-calculator/smartide-network: "true"
+  podSelector:
+    matchLabels:
+      boathouse-calculator/smartide-network: "true"
