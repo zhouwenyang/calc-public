@@ -13,6 +13,9 @@ spec:
   strategy:
     type: Recreate
   template:
+    metadata:
+      labels:
+        boathouse-calculator.service: boathouse-calculator
     spec:
       containers:
         - env:
