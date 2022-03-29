@@ -1,6 +1,6 @@
 version: smartide/v0.2
 orchestrator:
-  type: docker-compose
+  type: k8s
   version: 3
 workspace:
   dev-container:
