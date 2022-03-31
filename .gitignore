@@ -4,3 +4,4 @@ out/
 *.zip
 .scannerwork
 .DS_Store
+target/
