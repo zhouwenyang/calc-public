@@ -4,7 +4,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boathouse-calculator
+  name: boathouse-calculator-deployment
 spec:
   replicas: 1
   selector:
@@ -57,7 +57,7 @@ status:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: smartide-network
+  name: boathouse-calculator-network
 spec:
   ingress:
     - from:
