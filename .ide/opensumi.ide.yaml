@@ -6,12 +6,11 @@ workspace:
   dev-container:
     service-name: boathouse-calculator
     ports: # 申明端口
-      tools-webide-vscode: 6800
+      tools-webide-opensumi: 6800
       tools-ssh: 6822
       apps-application: 3001
-      tools-webide-opensumi: 8080
 
-    ide-type: vscode
+    ide-type: opensumi
     volumes: 
       git-config: true
       ssh-key: true
@@ -30,8 +29,7 @@ workspace:
       ports:
         - 3001:3001
         - 6822:22
-        - 6800:3000
-        - 8080:8000
+        - 6800:8000
       networks:
         - smartide-network
 
