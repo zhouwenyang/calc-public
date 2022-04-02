@@ -59,6 +59,10 @@ az aks create -g MyResourceGroup -n MyAKS --location southeastasia --node-vm-siz
 
 az aks get-credentials -g MyResourceGroup -n MyAKS
 
+az acr create --resource-group myResourceGroup --name <acrname> --sku Basic
+az acr update -n <acrname> --admin-enabled true
+az acr credential show --name <acrname>
+
 az aks use-dev-spaces -g MyResourceGroup -n MyAKS --space dev --yes
 
 ```
