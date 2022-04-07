@@ -28,6 +28,8 @@ spec:
           ports:
             - containerPort: 3001
           resources: {}
+      securityContext:
+        fsGroup: 1000
 status: {}
 
 ---
