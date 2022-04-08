@@ -28,13 +28,12 @@ spec:
             - name: ROOT_PASSWORD
               value: root123
             - name: DISABLE_CHOWN
-              value: 1
+              value: "1"
           image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-node-v2-vscode:all-version
           name: boathouse-calculator-dev
           ports:
             - containerPort: 3001
           resources: {}
-
 status: {}
 
 ---
