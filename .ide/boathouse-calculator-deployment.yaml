@@ -30,6 +30,10 @@ spec:
           ports:
             - containerPort: 3001
           resources: {}
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
 status: {}
 
 ---
