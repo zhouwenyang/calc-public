@@ -31,6 +31,7 @@ spec:
           ports:
             - containerPort: 3001
           resources: {}
+          command: [ "sh", "-c", "sleep 1h" ]
           securityContext:
             fsGroup: 1000
             runAsUser: 1000
