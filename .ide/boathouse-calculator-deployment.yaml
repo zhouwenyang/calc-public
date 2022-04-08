@@ -17,11 +17,11 @@ spec:
       labels:
         boathouse-calculator.service: boathouse-calculator
     spec:
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
       containers:
-        securityContext:
-          fsGroup: 1000
-          runAsUser: 1000
-          runAsGroup: 1000
         - env:
             - name: LOCAL_USER_PASSWORD
               value: root123
